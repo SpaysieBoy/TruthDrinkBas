@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruthDrinkBas.MainPage"
+             
+             BackgroundColor="#b40000">
+
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+
+            <Image Source="Truthordrink.jpg" WidthRequest="180" HeightRequest="180"></Image>
+
+
+            <StackLayout HorizontalOptions="Center" 
+                         VerticalOptions="CenterAndExpand">
+                <Label x:Name="UsernameLabel" 
+                       TextColor="White"
+                       Text="Username:"/>
+                <Entry x:Name="UsernameEntry" 
+                       Placeholder="Your e-mailaddress here!"
+                       TextColor="White"
+                       Keyboard="Email"/>
+                <Label x:Name="PasswordLabel" 
+                       TextColor="White"
+                       Text="Password:"/>
+                <Entry x:Name="PasswordEntry" 
+                       Placeholder="Your password here!"
+                       TextColor="White"
+                       IsPassword="True"/>
+                <Button x:Name="LoginButton" 
+                        Margin="0,20,0,0" 
+                        Text="Login" 
+                        TextColor="White" 
+                        BackgroundColor="#2196F3"
+                        BorderColor="Black"
+                        BorderWidth="3"
+                        CornerRadius="50"
+                        Clicked="LoginButton_Clicked"/>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Don't have an account?" TextColor="White"/>
+                            <Span Text=" Register" TextColor="White" FontAttributes="Bold" TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Forget your Password?" TextColor="White"/>
+                            <Span Text=" Get a new Password" TextColor="White" FontAttributes="Bold" TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

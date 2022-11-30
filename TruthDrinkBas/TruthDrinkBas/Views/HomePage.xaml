@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="TruthDrinkBas.Views.HomePage"
+            xmlns:local="clr-namespace:TruthDrinkBas.Views"
+            BackgroundColor="#b40000"
+            BarTextColor="Black"
+            BarBackgroundColor="#b40000">
+    
+    
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="HelpToolbarItem" Text="Help" Clicked="HelpToolbarItem_Clicked"/>
+        <ToolbarItem x:Name="LogOutToolbarItem" Text="Log out" Clicked="LogOutToolbarItem_Clicked"/>
+    </TabbedPage.ToolbarItems>
+    <local:Page1 Title="Truth or Drink"/>
+    <local:Page2 Title="The game"/>
+    <local:Page3 Title="Questions"/>
+</TabbedPage>

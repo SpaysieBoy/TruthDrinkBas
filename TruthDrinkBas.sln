@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruthDrinkBas.Android", "TruthDrinkBas\TruthDrinkBas.Android\TruthDrinkBas.Android.csproj", "{18F75B26-CE78-4AA5-B6CB-B3417D4BA28D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruthDrinkBas", "TruthDrinkBas\TruthDrinkBas\TruthDrinkBas.csproj", "{CAB8230A-5F8E-4FE0-9202-C793316D9A2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18F75B26-CE78-4AA5-B6CB-B3417D4BA28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F75B26-CE78-4AA5-B6CB-B3417D4BA28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F75B26-CE78-4AA5-B6CB-B3417D4BA28D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{18F75B26-CE78-4AA5-B6CB-B3417D4BA28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F75B26-CE78-4AA5-B6CB-B3417D4BA28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F75B26-CE78-4AA5-B6CB-B3417D4BA28D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CAB8230A-5F8E-4FE0-9202-C793316D9A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB8230A-5F8E-4FE0-9202-C793316D9A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB8230A-5F8E-4FE0-9202-C793316D9A2F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CAB8230A-5F8E-4FE0-9202-C793316D9A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB8230A-5F8E-4FE0-9202-C793316D9A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB8230A-5F8E-4FE0-9202-C793316D9A2F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {069F5637-1273-45CA-8B18-740A436A270C}
+	EndGlobalSection
+EndGlobal
