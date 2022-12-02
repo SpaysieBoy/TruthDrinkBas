@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TruthDrinkBas.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class GamePage : ContentPage
+    public partial class PicturePage : ContentPage
     {
-        public GamePage()
+        public PicturePage()
         {
             InitializeComponent();
         }

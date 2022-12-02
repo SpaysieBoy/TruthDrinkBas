@@ -1,12 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TruthDrinkBas.Views.RegisterPage">
+             x:Class="TruthDrinkBas.Views.RegisterPage"
+             BackgroundColor="#b40000">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <Frame Grid.Column="10" CornerRadius="80" BorderColor="Black" BackgroundColor="Black" Padding="5" Margin="5">
+                <Label HorizontalOptions="Center"
+                   VerticalTextAlignment="Center"
+                   Margin="30"
+                   Text="Create a new account"
+                   FontSize="Large"
+                   TextColor="#b40000"/>
+            </Frame>
+            <StackLayout HorizontalOptions="Center" 
+                         VerticalOptions="CenterAndExpand"
+                         Margin="100">
+                <Entry x:Name="UserNameEntry" Placeholder="New UserName"/>
+                <Entry x:Name="PassWordEntry" Placeholder="New PassWord"/>
+                <Entry x:Name="MailAdresEntry" Placeholder="New e-mail"/>
+                <Button x:Name="AddUserButton" 
+                        Text="Click on this button to save your new account!" 
+                        TextColor="White" 
+                        Margin="0,20,0,0" 
+                        BackgroundColor="#2196F3"
+                        BorderColor="Black"
+                        BorderWidth="3"
+                        CornerRadius="50"
+                        Clicked="AddUserButton_Clicked"/>
+            </StackLayout>
+        <ListView x:Name="UserListView" ItemSelected="UserListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding UserName}" TextColor="Black" />
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+        </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+

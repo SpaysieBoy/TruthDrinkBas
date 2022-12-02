@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TruthDrinkBas.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,5 +26,10 @@ namespace TruthDrinkBas.Views
         {
             Navigation.PushAsync(new MainPage());
         }
+        private void PictureToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PicturePage());
+        }
+        
     }
 }

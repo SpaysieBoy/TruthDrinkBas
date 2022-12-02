@@ -1,41 +1,46 @@
-﻿using System;
+﻿using SQLite;
+using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using TruthDrinkBas.Model;
 using TruthDrinkBas.Views;
 using Xamarin.Forms;
+using System.Xml.Linq;
 
 namespace TruthDrinkBas
 {
     public partial class MainPage : ContentPage
     {
+        User user = new User();
+
         public MainPage()
         {
             InitializeComponent();
+            Image.Source = ImageSource.FromResource("TruthDrinkBas.Pictures.Truthordrink.png");
         }
-        private async void LoginButton_Clicked(object sender, EventArgs e)
+        private void LoginButton_Clicked(object sender, EventArgs e)
         {
-            bool isUsernameEmpty = String.IsNullOrEmpty(UsernameEntry.Text);
-            bool isPasswordEmpty = String.IsNullOrEmpty(PasswordEntry.Text);
+            var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Test_db_sqlite");
+            var db = new SQLiteConnection(dbpath);
+            var myquery = db.Table<User>().Where(u=>u.UserName.Equals(UsernameEntry.Text) && u.Password.Equals(PasswordEntry.Text)).FirstOrDefault();
 
-            if (isUsernameEmpty)
+            if (myquery != null)
             {
-                UsernameEntry.Placeholder = "This can't be empty!";
-            }
-            else if (isPasswordEmpty)
-            {
-                PasswordEntry.Placeholder = "This can't be empty!";
-            }
-            else if (UsernameEntry.Text == "a" && PasswordEntry.Text == "a")
-            {
-                await Navigation.PushAsync(new HomePage());
+                App.Current.MainPage = new NavigationPage(new HomePage());
+                
             }
             else
             {
                 _ = DisplayAlert("Ai", "Wrong Username or Password", "Ok");
             }
+
+            
         }
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
@@ -44,7 +49,7 @@ namespace TruthDrinkBas
 
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page3());
+            Navigation.PushAsync(new RegisterPage());
         }
 
 

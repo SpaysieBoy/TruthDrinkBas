@@ -2,11 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TruthDrinkBas.Views.Page3">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <StackLayout>
+        <StackLayout Margin="20">
+            <Label Text="Geef hier je nieuwe vraag weer"/>
+            <Entry x:Name="QuestionEntry" Placeholder="Max 200 tekens!"/>
+            <Button x:Name="SaveButton" Text="Save Question" Clicked="SaveButton_Clicked"/>
         </StackLayout>
-    </ContentPage.Content>
+        <ListView x:Name="QuestionListView" ItemSelected="QuestionListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding QuestionBody}" TextColor="Black"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
 </ContentPage>

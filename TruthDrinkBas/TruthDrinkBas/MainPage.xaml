@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TruthDrinkBas.MainPage"
-             
-             BackgroundColor="#b40000">
+             x:Class="TruthDrinkBas.MainPage" 
+             BackgroundColor="#b40000"
+             NavigationPage.HasBackButton="False">
 
     <ContentPage.Content>
-        <StackLayout Margin="20">
+        <StackLayout Margin="30">
 
-            <Image Source="Truthordrink.jpg" WidthRequest="180" HeightRequest="180"></Image>
+            <Image x:Name="Image" WidthRequest="180" HeightRequest="180"></Image>
 
 
             <StackLayout HorizontalOptions="Center" 

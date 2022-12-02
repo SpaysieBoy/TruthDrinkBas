@@ -4,6 +4,10 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Android.Views;
+using Xamarin.Forms.Shapes;
+using System.IO;
+using Path = System.IO.Path;
 
 namespace TruthDrinkBas.Droid
 {
@@ -13,10 +17,14 @@ namespace TruthDrinkBas.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            Window?.AddFlags(WindowManagerFlags.Fullscreen);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+
+            string dbName = "Test_db_sqlite";
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string fullPath = Path.Combine(folderPath, dbName);
+            LoadApplication(new App(fullPath));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -24,5 +32,6 @@ namespace TruthDrinkBas.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }

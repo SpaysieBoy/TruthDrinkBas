@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruthDrinkBas.Views.GetStatements_page"
+             BackgroundColor="#b40000">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand">
+                <Entry x:Name="QuestionBodyEntry"
+                       IsReadOnly="True"/>
+
+                <Button x:Name="ButtonRandom"
+                        FontSize="Title"
+                        Margin="40,40,40,40" 
+                        Text="New statement" 
+                        TextColor="White" 
+                        BackgroundColor="Gray"
+                        BorderColor="Black"
+                        BorderWidth="3"
+                        CornerRadius="50"
+                        Clicked="Button_Clicked_1"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,11 +2,55 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TruthDrinkBas.Views.Page1">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <Label Text="Rules of the game" HorizontalOptions="Center" FontSize="Large" TextColor="Black"/>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="OVERVIEW OF TRUTH OR DRINK" 
+                           FontSize="Medium" 
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Truth or Drink is the perfect variation of Truth or Dare for those that are over 21 years old. You get to make a decision. Do you answer questions truthfully, or do you drink? Don't get a loose tongue, and be careful of the choices you make!"
+                           FontSize="Small"
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="SETUP" 
+                           FontSize="Medium" 
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Firstly, choose a dealer for the game. This may be done in any way. The first dealer will shuffle the deck and place the deck in the middle of the playing area, where all players may easily access it. Then, each player is dealt three Strategy Cards. The game is ready to begin!"
+                           FontSize="Small"
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="GAMEPLAY" 
+                           FontSize="Medium" 
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="To begin, the dealer will draw a card. They will then choose two players to question each other. The dealer will choose which question is asked first, giving the card to the first player to ask questions. The opposing player may either answer or drink.
+
+If they choose to drink, then they cannot win the round. The next player will then ask the remaining question found on the card. If both players are willing to answer the question, then the dealer will choose which answer they liked best. The player who gives the best, or only, answer will win a Question Card.
+Gameplay will continue clockwise around the group. Players may use their Strategy cards to redirect questions that they do not want to answer without forfeiting the round. These may be played during any turn, even if it is not your own. Each player should make sure they have three Strategy Cards at the start of every round"
+                           FontSize="Small"
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="END OF GAME" 
+                           FontSize="Medium" 
+                           TextColor="White"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="The game comes to an end when a player has collected 5 Question Cards. This player is declared the winner."
+                           FontSize="Small"
+                           TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    
 </ContentPage>
