@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TruthDrinkBas.MainPage" 
              BackgroundColor="#b40000"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
         <StackLayout Margin="30">

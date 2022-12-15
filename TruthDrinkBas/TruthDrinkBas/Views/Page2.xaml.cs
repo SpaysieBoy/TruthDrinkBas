@@ -19,7 +19,7 @@ namespace TruthDrinkBas.Views
 
         private void GameButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GetStatements_page());
+            Navigation.PushAsync(new PeopleInGame());
         }
     }
 }

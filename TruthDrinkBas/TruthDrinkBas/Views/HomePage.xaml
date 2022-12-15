@@ -4,9 +4,8 @@
             x:Class="TruthDrinkBas.Views.HomePage"
             xmlns:local="clr-namespace:TruthDrinkBas.Views"
             BackgroundColor="#b40000"
-            BarTextColor="Black"
-            BarBackgroundColor="#b40000"
-            NavigationPage.HasBackButton="False">
+            NavigationPage.HasBackButton="False"
+            NavigationPage.IconColor="#b40000">
     
     
     <TabbedPage.ToolbarItems>

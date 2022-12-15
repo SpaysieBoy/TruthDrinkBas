@@ -33,5 +33,6 @@ namespace TruthDrinkBas.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+
     }
 }

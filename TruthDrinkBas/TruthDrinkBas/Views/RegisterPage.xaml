@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center"
                      HorizontalOptions="Center">
-            <Frame Grid.Column="10" CornerRadius="80" BorderColor="Black" BackgroundColor="Black" Padding="5" Margin="5">
+            <Frame Grid.Column="10" BorderColor="Black" BackgroundColor="Black" Padding="5" Margin="5">
                 <Label HorizontalOptions="Center"
                    VerticalTextAlignment="Center"
                    Margin="30"
@@ -17,11 +17,11 @@
             <StackLayout HorizontalOptions="Center" 
                          VerticalOptions="CenterAndExpand"
                          Margin="100">
-                <Entry x:Name="UserNameEntry" Placeholder="New UserName"/>
-                <Entry x:Name="PassWordEntry" Placeholder="New PassWord"/>
+                <Entry x:Name="UserNameEntry" Placeholder="New userName"/>
+                <Entry x:Name="PassWordEntry" Placeholder="New passWord"/>
                 <Entry x:Name="MailAdresEntry" Placeholder="New e-mail"/>
                 <Button x:Name="AddUserButton" 
-                        Text="Click on this button to save your new account!" 
+                        Text="Save your new account!" 
                         TextColor="White" 
                         Margin="0,20,0,0" 
                         BackgroundColor="#2196F3"

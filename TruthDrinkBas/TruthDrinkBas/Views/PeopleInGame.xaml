@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruthDrinkBas.Views.PeopleInGame"
+             BackgroundColor="#b40000">
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="Center" 
+                     VerticalOptions="CenterAndExpand">
+            <Label Text="Add a new user to the game"/>
+            <Entry x:Name="ManyPeopleGameEntry" 
+                   Placeholder="How many people in this game!"/>
+            <Button x:Name="PersonButton" 
+                    Margin="0,20,0,0" 
+                    Text="Save person" 
+                    TextColor="White" 
+                    BackgroundColor="Black"
+                    BorderColor="Black"
+                    BorderWidth="3"
+                    CornerRadius="50"
+                    Clicked="PersonButton_Clicked"/>
+
+            <Label Text="Click to start the game!"/>
+            <Button x:Name="GameButton" 
+                    Margin="0,20,0,0" 
+                    Text="Start the Game" 
+                    TextColor="White" 
+                    BackgroundColor="Black"
+                    BorderColor="Black"
+                    BorderWidth="3"
+                    CornerRadius="50"
+                    Clicked="GameButton_Clicked"/>
+        </StackLayout>
+        <ListView x:Name="PersoninGameListView" ItemSelected="PersoninGameListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding totalNumbers}" TextColor="Black"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

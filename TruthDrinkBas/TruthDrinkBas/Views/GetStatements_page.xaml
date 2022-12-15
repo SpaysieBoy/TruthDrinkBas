@@ -5,21 +5,37 @@
              BackgroundColor="#b40000">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout HorizontalOptions="CenterAndExpand"
-                         VerticalOptions="CenterAndExpand">
-                <Entry x:Name="QuestionBodyEntry"
-                       IsReadOnly="True"/>
+            <StackLayout>
+                <Label x:Name="PeopleInGameEntry"
+                       FontSize="30"
+                       HorizontalOptions="Center"
+                       TextColor="black"/>
+
+                <Label x:Name="QuestionBodyEntry"
+                       FontSize="45"
+                       TextColor="White"/>
+
 
                 <Button x:Name="ButtonRandom"
                         FontSize="Title"
                         Margin="40,40,40,40" 
-                        Text="New statement" 
+                        Text="TRUTH" 
                         TextColor="White" 
                         BackgroundColor="Gray"
                         BorderColor="Black"
                         BorderWidth="3"
                         CornerRadius="50"
                         Clicked="Button_Clicked_1"/>
+                <Button x:Name="ButtonRandom1"
+                        FontSize="Title"
+                        Margin="40,40,40,40" 
+                        Text="DRINK" 
+                        TextColor="White" 
+                        BackgroundColor="Purple"
+                        BorderColor="Black"
+                        BorderWidth="3"
+                        CornerRadius="50"
+                        Clicked="Button_Clicked_2"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

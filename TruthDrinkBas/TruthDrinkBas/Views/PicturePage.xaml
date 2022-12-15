@@ -4,9 +4,9 @@
              x:Class="TruthDrinkBas.Views.PicturePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Pick Image" Clicked="Button_Clicked"/>
+            <Button Text="Take Picture" Clicked="Button_Clicked_1"/>
+            <Image x:Name="resultImage"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

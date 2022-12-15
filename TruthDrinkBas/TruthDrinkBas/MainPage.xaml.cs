@@ -26,6 +26,10 @@ namespace TruthDrinkBas
         }
         private void LoginButton_Clicked(object sender, EventArgs e)
         {
+            bool isUserNameEmpty = string.IsNullOrEmpty(UsernameEntry.Text);
+            bool isPassWordEmpty = string.IsNullOrEmpty(PasswordEntry.Text);
+            
+
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Test_db_sqlite");
             var db = new SQLiteConnection(dbpath);
             var myquery = db.Table<User>().Where(u=>u.UserName.Equals(UsernameEntry.Text) && u.Password.Equals(PasswordEntry.Text)).FirstOrDefault();
@@ -34,6 +38,14 @@ namespace TruthDrinkBas
             {
                 App.Current.MainPage = new NavigationPage(new HomePage());
                 
+            }
+            else if (isUserNameEmpty)
+            {
+                UsernameEntry.Placeholder = "This can't be empty";
+            }
+            else if (isPassWordEmpty)
+            {
+                PasswordEntry.Placeholder = "This can't be empty";
             }
             else
             {
