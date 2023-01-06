@@ -5,26 +5,26 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Xamarin.Essentials;
 using System.Threading.Tasks;
 using TruthDrinkBas.Model;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static System.Net.Mime.MediaTypeNames;
+using Java.Lang;
 
 namespace TruthDrinkBas.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GetStatements_page : ContentPage
     {
-
         public GetStatements_page()
         {
             InitializeComponent();
-
-
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Test_db_sqlite");
             var db = new SQLiteConnection(dbpath);
@@ -48,8 +48,10 @@ namespace TruthDrinkBas.Views
             var W = myquery1[index1];
             PeopleInGameEntry.Text = (W.totalNumbers);
 
+            await TextToSpeech.SpeakAsync(QuestionBodyEntry.Text, new SpeechOptions{});
+
         }
-        private void Button_Clicked_2(object sender, EventArgs e)
+        private async void Button_Clicked_2(object sender, EventArgs e)
         {
             var dbpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Test_db_sqlite");
             var db = new SQLiteConnection(dbpath);
@@ -71,6 +73,7 @@ namespace TruthDrinkBas.Views
             var W = myquery1[index1];
             PeopleInGameEntry.Text = (W.totalNumbers);
 
+            await TextToSpeech.SpeakAsync(QuestionBodyEntry.Text, new SpeechOptions { });
 
         }
 

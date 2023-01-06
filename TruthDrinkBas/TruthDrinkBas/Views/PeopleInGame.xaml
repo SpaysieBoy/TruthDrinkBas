@@ -9,7 +9,7 @@
                      VerticalOptions="CenterAndExpand">
             <Label Text="Add a new user to the game"/>
             <Entry x:Name="ManyPeopleGameEntry" 
-                   Placeholder="How many people in this game!"/>
+                   Placeholder="Select the people to add in your game."/>
             <Button x:Name="PersonButton" 
                     Margin="0,20,0,0" 
                     Text="Save person" 

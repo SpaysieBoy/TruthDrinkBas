@@ -6,10 +6,9 @@
             BackgroundColor="#b40000"
             NavigationPage.HasBackButton="False"
             NavigationPage.IconColor="#b40000">
-    
-    
+
+
     <TabbedPage.ToolbarItems>
-        <ToolbarItem x:Name="HelpToolbarItem" Text="Help" Clicked="HelpToolbarItem_Clicked"/>
         <ToolbarItem x:Name="LogOutToolbarItem" Text="Log out" Clicked="LogOutToolbarItem_Clicked"/>
         <ToolbarItem x:Name="UserNameToolbarItem" Text="Make picture" Clicked="PictureToolbarItem_Clicked"/>
         
@@ -17,4 +16,5 @@
     <local:Page1 Title="Truth or Drink"/>
     <local:Page2 Title="The game"/>
     <local:Page3 Title="Add Question"/>
+    <local:Cocktail Title="See Cocktails"/>
 </TabbedPage>

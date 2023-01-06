@@ -5,27 +5,37 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
+using Android.Graphics;
+using Android.Media;
+using System.IO;
+using Android.Provider;
 
 namespace TruthDrinkBas.Model
 {
-    public class Picture
-    {
-        [Obsolete]
-        public void storePhotoToGallery(byte[] bytes, string fileName)
+    public class Picture 
+    { 
+
+        public void ExportBitmapAsPNG(Bitmap bitmap)
         {
-            Context context = MainActivity.Instancen;
-            try
+
+            // Get/Create Album Folder To Save To
+            var jFolder = new Java.IO.File(Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryPictures), "MyAppNamePhotoAlbum");
+            if (!jFolder.Exists())
+                jFolder.Mkdirs();
+
+            var jFile = new Java.IO.File(jFolder, "MyPhoto.jpg");
+
+            // Save File
+            using (var fs = new FileStream(jFile.AbsolutePath, FileMode.CreateNew))
             {
-                Java.IO.File storagePath = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryPictures);
-                string path = System.IO.Path.Combine(storagePath.ToString(), fileName);
-                System.IO.File.WriteAllBytes(path, bytes);
-                var mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
-                mediaScanIntent.SetData(Android.Net.Uri.FromFile(new Java.IO.File(path)));
-                context.SendBroadcast(mediaScanIntent);
+                bitmap.Compress(Bitmap.CompressFormat.Png, 100, fs);
             }
-            catch (Exception ex)
-            {
-            }
+
+            // Save Picture To Gallery
+            var intent = new Intent(MediaStore.ActionImageCapture);
+            //intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(jFile));
+            //StartActivityForResult(intent, 0);
+
         }
     }
 }

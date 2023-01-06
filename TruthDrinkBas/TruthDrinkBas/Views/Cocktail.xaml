@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruthDrinkBas.Views.Cocktail">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Welcome to Xamarin.Forms!"/>
+            <Entry x:Name="CocktailnameEntry" Placeholder="NAME"/>
+            <Button Text="Zoek" x:Name="ZoekCocktailNameButton" Clicked="ZoekCocktailNameButton_Clicked"/>
+            <ScrollView>
+                <StackLayout>
+                    <ListView x:Name="CocktailListView" HasUnevenRows="True" ItemSelected="CocktailListView_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"   />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"   />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.RowSpan="2"
+                                               Source="{Binding strDrinkThumb}"
+                                               Aspect="AspectFill"
+                                               HeightRequest="60"
+                                               WidthRequest="60" />
+                                        <Label Grid.Column="1"
+                                               Text="{Binding strDrink}"
+                                               FontAttributes="Bold"/>
+                                        <Label Grid.Row="1"
+                                               Grid.Column="1"
+                                               Text="{Binding strCategory}"
+                                               VerticalOptions="End"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

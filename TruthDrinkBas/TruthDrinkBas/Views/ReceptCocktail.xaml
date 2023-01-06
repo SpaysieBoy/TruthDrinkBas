@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TruthDrinkBas.Views.ReceptCocktail"
+             BackgroundColor="#b40000">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+            <Image Grid.RowSpan="2"
+                   x:Name="ImageBox"
+                   Source="{Binding strDrinkThumb}"
+                   Aspect="AspectFill"
+                   HeightRequest="300"
+                   WidthRequest="300" />
+            <Label x:Name="idDrink"/>
+            <Label x:Name="strDrink" Text="{Binding strDrink}" FontSize="50" TextColor="Black" HorizontalOptions="Center"/>
+            <Label x:Name="strCategory" Text="{Binding strCategory}"/>
+            <Label x:Name="strAlcoholic" Text="{Binding strAlcoholic}"/>
+            <Label x:Name="strGlas" Text="{Binding strGlass}"/>
+            <Label x:Name="Ingredients" Text="Ingredients:" FontSize="40" TextColor="Black" HorizontalOptions="Center"/>
+            <Label x:Name="strIngredient1" Text="{Binding strIngredient1}"/>
+            <Label x:Name="strIngredient2" Text="{Binding strIngredient2}"/>
+            <Label x:Name="strIngredient3" Text="{Binding strIngredient3}"/>
+            <Label x:Name="strIngredient4" Text="{Binding strIngredient4}"/>
+            <Label x:Name="strIngredient5" Text="{Binding strIngredient5}"/>
+            <Label x:Name="strIngredient6" Text="{Binding strIngredient6}"/>
+            <Label x:Name="strIngredient7" Text="{Binding strIngredient7}"/>
+            <Label x:Name="strIngredient8" Text="{Binding strIngredient8}"/>
+            <Label x:Name="strIngredient9" Text="{Binding strIngredient9}"/>
+            <Label x:Name="strIngredient10" Text="{Binding strIngredient10}"/>
+            <Label x:Name="strIngredient11" Text="{Binding strIngredient11}"/>
+            <Label x:Name="strIngredient12" Text="{Binding strIngredient12}"/>
+            <Label x:Name="strIngredient13" Text="{Binding strIngredient13}"/>
+            <Label x:Name="strIngredient14" Text="{Binding strIngredient14}"/>
+            <Label x:Name="strIngredient15" Text="{Binding strIngredient15}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
